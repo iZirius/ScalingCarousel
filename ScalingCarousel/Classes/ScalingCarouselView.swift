@@ -252,6 +252,10 @@ fileprivate extension PrivateAPI {
 private typealias InvisibleScrollDelegate = ScalingCarouselView
 extension InvisibleScrollDelegate: UIScrollViewDelegate {
     
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+         self.scrollViewDidEndDecelerating(scrollView)
+     }
+    
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         /*
